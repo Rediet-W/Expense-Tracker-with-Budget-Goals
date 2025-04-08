@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
- reactStrictMode: true,
-  swcMinify: true,
-  compiler: {
-    // Enables the styled-components SWC transform
-    styledComponents: true
-  },
-  output: 'standalone'
+ experimental: {
+    optimizeCss: true, // Ensures CSS is properly processed
+  }
 };
 
 export default nextConfig;
