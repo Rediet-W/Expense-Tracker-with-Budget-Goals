@@ -45,6 +45,12 @@ export default function SignUpPage() {
       >
         Sign Up
       </button>
+      <p className="text-sm text-gray-600 mt-4">
+        Already have an account?{" "}
+        <a href="/login" className="text-blue-600 hover:underline">
+          Log in
+        </a>
+      </p>
     </form>
   );
 }
