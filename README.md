@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💰 Expense Tracker with Budget Goals
 
-## Getting Started
+A full-stack expense tracker built with **Next.js**, **Supabase**, and **Tailwind CSS**. Authenticated users can track their expenses, set monthly budgets, and visualize their spending.
 
-First, run the development server:
+Live Demo: [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- User Authentication (Supabase Auth)
+- Add, view, and delete expenses
+- Set and update monthly budget goals
+- Summary of total spent vs remaining budget
+- Visual report with Pie Chart (Recharts)
+- Create and use custom categories
+- Alert if user goes over budget
+- Responsive and clean UI
+- Deployed on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend & Backend**: Next.js with TypeScript
+- **Database & Auth**: Supabase
+- **UI**: Tailwind CSS
+- **Charts**: Recharts
+- **Hosting**: Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 How to Run Locally
 
-## Deploy on Vercel
+1. Clone the repo and install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone [https://github.com/Rediet-W/Expense-Tracker-with-Budget-Goals.git]
+   cd expense-tracker
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Setup `.env.local`:
+
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+   ```
+
+3. Run the dev server:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🔐 Supabase Setup
+
+Create the following tables and enable Row-Level Security:
+
+### `expenses`
+- id (uuid, PK)
+- user_id (uuid)
+- date (date)
+- description (text)
+- amount (float)
+- category (text)
+- currency (text)
+- created_at (timestamp)
+
+### `budget_goals`
+- id (uuid, PK)
+- user_id (uuid)
+- month (int)
+- year (int)
+- goal_amount (float)
+
+### `categories`
+- id (uuid, PK)
+- user_id (uuid)
+- name (text)
+
+---
+
+## ✅ Bonus Features
+
+- Custom categories
+- Spending summary chart
+- Budget warning modal
+
+---
+
+## 🌍 Deployment
+
+Live demo: [https://expense-tracker-with-budget-goals.vercel.app/signup]
