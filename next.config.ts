@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
- experimental: {
-    optimizeCss: true, // Ensures CSS is properly processed
-  }
+   /* config options here */
+  reactStrictMode: true,
+   swcMinify: true,
+   compiler: {
+     // Enables the styled-components SWC transform
+     styledComponents: true
+   },
+   output: 'standalone'
+ };
 };
 
 export default nextConfig;
