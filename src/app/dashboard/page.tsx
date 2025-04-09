@@ -8,10 +8,6 @@ import { BudgetGoal } from "@/types/budget";
 import { PieChart, Pie, Tooltip, Legend } from "recharts";
 
 export default function Dashboard() {
-  useEffect(() => {
-    fetchUserAndExpenses();
-  }, []);
-
   const router = useRouter();
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -179,7 +175,12 @@ export default function Dashboard() {
       console.error("Delete failed:", error.message);
     }
   };
-
+  useEffect(() => {
+    const fetchData = async () => {
+      await fetchUserAndExpenses();
+    };
+    fetchData();
+  }, [fetchUserAndExpenses]);
   return (
     <div className="p-8">
       <div className="flex justify-between items-center mb-8">
