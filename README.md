@@ -2,7 +2,7 @@
 
 A full-stack expense tracker built with **Next.js**, **Supabase**, and **Tailwind CSS**. Authenticated users can track their expenses, set monthly budgets, and visualize their spending.
 
-Live Demo: [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
+Live Demo: [https://expense-tracker-with-budget-goals-7x4o6mi8a-rediet-ws-projects.vercel.app]
 
 ---
 
@@ -93,4 +93,4 @@ Create the following tables and enable Row-Level Security:
 
 ## 🌍 Deployment
 
-Live demo: [https://expense-tracker-with-budget-goals.vercel.app/signup]
+Live demo: [https://expense-tracker-with-budget-goals-7x4o6mi8a-rediet-ws-projects.vercel.app]
